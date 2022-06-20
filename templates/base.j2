@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')  }}">
+        <title>Kevin Kraatz |{% block title %} {% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="/static/media/favicon.ico">
+    </head>
+    <body onload="document.body.style.opacity='1'">
+        <div class="wrapper">
+            <div class="triangle-pattern"></div>
+            <!--triangle pattern source: davegamache.com-->
+        </div>
+        <div class="fixed-header">
+            <div class="header-container">
+                <nav>
+                    <a href="{{ url_for('home') }}" title="Home">Home</a>
+                    <a href="{{ url_for('about') }}" title="About Me">About Me</a>
+                    <a href="{{ url_for('download') }}" title="Resume">Resume</a>
+                </nav>
+            </div>
+        </div>
+        <div class="fixed-main">
+            <div class="head-container">
+                {% block head %} {% endblock %}
+            </div>
+            <div class="lines-container">
+                {% block lines %} {% endblock %}
+            </div>
+            <div class="body-container">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <a href="https://www.github.com/kakraatz" class="image-link"><img src="static/media/GitHub-Mark-Light-64px.png" alt="GitHub" id="github-button" title="GitHub"></a>
+                <a href="https://www.linkedin.com/in/kevin-kraatz" class="image-link"><img src="static/media/linkedin.png" alt="LinkedIn" id="linkedin-button" title="LinkedIn"></a>
+                <a href="mailto:hello@kevinkraatz.com" class="image-link"><img src="static/media/mail-64.png" alt="Email" id="email-button" title="hello@kevinkraatz.com"></a>
+                <br>
+                &copy; 2022 Kevin Kraatz
+            </div>
+        </footer>
+    </body>
+</html>

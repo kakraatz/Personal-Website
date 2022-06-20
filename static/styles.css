@@ -1,0 +1,294 @@
+/*   ----- Imports  -----  */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Mono&display=swap');
+@import url("https://use.typekit.net/qgw7myz.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Mono&family=Roboto+Serif:ital,opsz,wght@1,8..144,300&display=swap');
+
+/*   ----- Variables  -----  */
+:root {
+	--specialGray: #282c34;
+    --niceBlue: #61dafb;
+    --lightGray: #bac0c2;
+    --lighterGray: #f4f8fa;
+	color: white;
+	font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 18px;
+}
+
+body {
+	font-family: 'Zen Kurenaido', sans-serif;
+	margin: auto;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* ----- Anchors ----- Text links */
+nav {
+    padding-top: 15px;
+}
+
+nav a {
+	color: white;
+	padding: 1px;
+	margin: 5px;
+    border: 5px;
+	font-size: 36px;
+	text-decoration: none;
+	font-family: 'Zen Kurenaido', sans-serif;
+}
+
+nav a:hover {
+	color: #37788b;
+}
+
+/*  ----- Page layout blocks -----  */
+
+
+/*  -----  Typography  ----- */
+p {
+	font-family: 'Zen Kurenaido', sans-serif;
+    text-align: left;
+    color: white;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+p.intro-text {
+    text-align: center;
+}
+
+#homeheading {
+    height: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 4.5em;
+	color: white;
+	margin: auto;
+    display: inline-block;
+}
+
+h1 {
+	font-family: 'Zen Kurenaido', sans-serif;
+	margin: auto;
+    text-align: center;
+}
+
+/*  ----- Form ----- */
+.wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    background-image: url('/static/media/topo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    opacity: 0.9;
+  }
+
+  .wrapper:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+
+.triangle-pattern {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('/static/media/triangles.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.03;
+}
+
+.fixed-header {
+    position: absolute;
+	top: 5px;
+    left: 5px;
+    right: 5px;
+    height: 100px;
+    overflow: hidden;
+	color: white;
+	margin: auto;
+}
+
+.fixed-main {
+    display: block;
+    top: 130px;
+    bottom: 175px;
+    position: fixed;
+    overflow: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 15px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.head-container {
+    margin: auto;
+    font-size: 25px;
+    align-items: center;
+    text-align: center;
+}
+
+.lines-container {
+    padding-left: 38%;
+    padding-right: 38%;
+    margin-top: 100px;
+}
+
+.body-container {
+    border-radius: 25px;
+    display: block;
+    width: 80%;
+    margin: auto;
+    font-size: 30px;
+    background-color: rgba(21, 45, 45, 0.6);
+}
+
+.header-container {
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 30px;
+}
+.footer-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 26px;
+}
+
+.img-about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.about-container {
+    display: block;
+    padding: 1vw 1vw;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.about-text {
+    padding: 0.5rem;
+    color: white;
+    text-align: left;
+}
+
+.img-text {
+    text-align: left;
+    padding: 15px;
+    margin: 0;
+    width: 70%;
+}
+
+.image-caption-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.caption {
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 26px;
+}
+
+.about-images {
+    border-radius: 25px;
+    height: auto;
+    max-width: 100%;
+}
+
+#side-img {
+    padding-left: 20px;
+    padding-right: 5px;
+}
+
+.image-link {
+    display: inline-block;
+    padding: 5px;
+}
+
+.image-link:hover img {
+    display: inline-block;
+    opacity: 0.7;
+}
+
+/*   ===== PHONE  media query overrides mobile styles ===== */
+@media all and (min-width: 320px) {
+    .home-p{
+        font-size: 34px;
+        font-family: 'Roboto Serif', serif;
+        font-weight: 500;
+        font-style: italic;
+        text-align: center;
+        background-color: rgba(21, 45, 45, 0.6);
+        border-radius: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {
+    .home-p{
+        font-size: 34px;
+        font-family: 'Roboto Serif', serif;
+        font-weight: 500;
+        font-style: italic;
+        text-align: center;
+        background-color: rgba(21, 45, 45, 0.6);
+        border-radius: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {
+    .home-p{
+        font-size: 34px;
+        font-family: 'Roboto Serif', serif;
+        font-weight: 500;
+        font-style: italic;
+        text-align: center;
+        background-color: rgba(21, 45, 45, 0.6);
+        border-radius: 25px;
+        max-width: 220px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {
+}
